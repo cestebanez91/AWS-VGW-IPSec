@@ -1,0 +1,8 @@
+<entry name="AWSVPN">
+ <network>
+   <layer3>
+     <member>{{ panos_tunnel }}</member>
+     <member>loopback.100</member>
+   </layer3>
+ </network>
+</entry>

@@ -1,0 +1,14 @@
+<entry name="AWSIPSecCrypto">
+ <esp>
+   <authentication>
+     <member>sha1</member>
+   </authentication>
+   <encryption>
+     <member>aes-128-cbc</member>
+   </encryption>
+ </esp>
+ <lifetime>
+   <seconds>3600</seconds>
+ </lifetime>
+ <dh-group>no-pfs</dh-group>
+</entry>
