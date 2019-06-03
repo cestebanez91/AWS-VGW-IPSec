@@ -45,6 +45,10 @@ variables:
     description: AWS BGP Peer for tunnel 2
     default:
     type_hint: ip_address
+  - name: aws_bgp_as
+    description: AWS VGW BGP AS - Specify your AWS BGP AS if custom. Must match the value you configure in AWS VPN Gateway.
+    default: 64512
+    type_hint: text
   - name: panos_ipsec_interface
     description: PAN-OS ethernet interface for IKE/IPsec - Ethernet interface for untrust initiating the VPN connection
     default: ethernet1/1
@@ -74,26 +78,26 @@ variables:
   - name: panos_tunnel_ip_1
     description: IP address for tunnel 1 interface
     default:
-    type_hint: ip_address
-  - name: panos_tunnel_ip_2
-    description: IP address for tunnel 2 interface
+    type_hint: text
+  - name: panos_ike_presharedkey_1
+    description: PAN-OS IKE preshared key for tunnel 1
     default:
-    type_hint: ip_address
+    type_hint: text
   - name: panos_tunnel_2
-    description: PAN-OS Tunnel 1 inteface number - If you are using an existing tunnel interface, opt for another than tunnel.1
+    description: PAN-OS Tunnel 2 inteface number - If you are using an existing tunnel interface, opt for another than tunnel.2
     default: tunnel.1
     type_hint: dropdown
     dd_list:
-      - key: tunnel.1
-        value: tunnel.1
       - key: tunnel.2
         value: tunnel.2
       - key: tunnel.3
         value: tunnel.3
       - key: tunnel.4
         value: tunnel.4
-  - name: panos_ike_presharedkey_1
-    description: PAN-OS IKE preshared key for tunnel 1
+      - key: tunnel.5
+        value: tunnel.5
+  - name: panos_tunnel_ip_2
+    description: IP address for tunnel 2 interface
     default:
     type_hint: text
   - name: panos_ike_presharedkey_2
@@ -112,10 +116,7 @@ variables:
     description: PAN-OS BGP AS - Specify your local BGP AS if needed. Must match the value you configure in AWS Customer Gateway.
     default: 65000
     type_hint: text
-  - name: aws_bgp_as
-    description: AWS VGW BGP AS - Specify your AWS BGP AS if custom. Must match the value you configure in AWS VPN Gateway.
-    default: 64512
-    type_hint: text
+
 # ---------------------------------------------------------------------
 # end of variables section
 
