@@ -1,7 +1,7 @@
 <entry name="{{ aws_vpn_name }}-IKE-{{ panos_tunnel_1 }}">
  <authentication>
    <pre-shared-key>
-     <key>{{ panos_ike_presharedkey_1 | md5_hash }}</key>
+     <key>{{ panos_ike_presharedkey_1 }}</key>
    </pre-shared-key>
  </authentication>
  <protocol>
@@ -38,7 +38,7 @@
 <entry name="{{ aws_vpn_name }}-IKE-{{ panos_tunnel_2 }}">
  <authentication>
    <pre-shared-key>
-     <key>{{ panos_ike_presharedkey_2 | md5_hash }}</key>
+     <key>{{ panos_ike_presharedkey_2 }}</key>
    </pre-shared-key>
  </authentication>
  <protocol>
