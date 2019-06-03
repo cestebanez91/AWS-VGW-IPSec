@@ -35,7 +35,7 @@
    <ip>{{ aws_vgw_ip_1 }}</ip>
  </peer-address>
 </entry>
-<entry name="{{ aws_vpn_name }}-{{ panos_tunnel_2 }}">
+<entry name="{{ aws_vpn_name }}-IKE-{{ panos_tunnel_2 }}">
  <authentication>
    <pre-shared-key>
      <key>{{ panos_ike_presharedkey_2 | md5_hash }}</key>
