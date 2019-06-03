@@ -120,7 +120,7 @@
      <reject-default-route>no</reject-default-route>
      <allow-redist-default-route>no</allow-redist-default-route>
      <redist-rules>
-       <entry name="Connected-for-{{ aws_vpn_name }}">
+       <entry name="Connected">
          <address-family-identifier>ipv4</address-family-identifier>
          <enable>yes</enable>
          <set-origin>incomplete</set-origin>
