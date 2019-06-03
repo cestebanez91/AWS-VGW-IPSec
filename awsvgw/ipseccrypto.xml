@@ -10,5 +10,5 @@
  <lifetime>
    <seconds>3600</seconds>
  </lifetime>
- <dh-group>no-pfs</dh-group>
+ <dh-group>group2</dh-group>
 </entry>
